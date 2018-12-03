@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Base64转换图片（小程序）</title>
+        <script
+            src="https://ihogo-1251903635.cos.ap-chengdu.myqcloud.com/oss/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <textarea type="text" id="qrcode" placeholder="这里填 base64"></textarea>
+        <button onclick="run()">转换</button>
+        <img src="data:image/png;base64," id="img" alt="" srcset="">
+    </body>
+    <script>
+    function run(){
+
+    var img =document.getElementById('img');
+    img.src=img.src+ document.getElementById('qrcode').value;
+    } 
+</script>
+</html>
